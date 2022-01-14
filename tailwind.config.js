@@ -1,5 +1,5 @@
 module.exports = {
-  // mode: "jit",
+  mode: "jit",
   purge: [
     "./components/**/*.{vue,js}",
     "./layouts/**/*.vue",
@@ -8,6 +8,7 @@ module.exports = {
     "./nuxt.config.{js,ts}",
     "./app.vue",
   ],
+
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -16,4 +17,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
