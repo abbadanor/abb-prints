@@ -2,6 +2,6 @@
 
 <template>
   <div>
-    <p>min kuk!</p>
+    <p>ja det är min webbsida!</p>
   </div>
 </template>
