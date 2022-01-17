@@ -1,5 +1,4 @@
 module.exports = {
-  mode: "jit",
   purge: [
     "./components/**/*.{vue,js}",
     "./layouts/**/*.vue",
@@ -11,7 +10,18 @@ module.exports = {
 
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        current: "#262624",
+        abb: {
+          100: "#dc0000",
+          200: "#ff000f",
+          300: "#ff534a",
+          400: "#f3f3ec",
+        },
+        // ...
+      },
+    },
   },
   variants: {
     extend: {},
