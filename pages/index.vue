@@ -1,7 +1,7 @@
 <template>
   <div class="w-full max-w-md mx-auto">
     <RadioGroup v-model="selected">
-      <RadioGroupLabel>{{
+      <RadioGroupLabel as="h1" class="font-semibold text-lg mb-1">{{
         availableQuestions[question].question
       }}</RadioGroupLabel>
       <div class="space-y-2">
@@ -71,17 +71,16 @@
         Backward
       </button>
       <button
-        class="bg-white text-sm font-medium text-black px-5 py-2 rounded-lg shadow-md cursor-pointer focus:outline-none"
-        @click="availableQuestions()"
-      >
-        Test
-      </button>
-      <button
         class="bg-abb-300 text-sm font-medium text-white px-5 py-2 rounded-lg shadow-md cursor-pointer focus:outline-none"
         @click="next()"
       >
         Forward
       </button>
+    </div>
+    <div v-for="q in availableQuestions" :key="q.id">
+      <span>ID: {{ q.id }}, </span>
+      <span>Question: {{ q.question }}</span>
+      <span v-if="'answer' in q">, Answer: {{ q.answer }}</span>
     </div>
   </div>
 </template>
@@ -106,7 +105,12 @@ export default {
   },
   created() {
     this.$watch("question", (newQuestion: number) => {
-      this.selected = this.availableQuestions[newQuestion].options[0];
+      if ("answer" in this.availableQuestions[newQuestion]) {
+        const answer = this.availableQuestions[newQuestion].answer;
+        this.selected = this.availableQuestions[newQuestion].options[answer];
+      } else {
+        this.selected = this.availableQuestions[newQuestion].options[0];
+      }
     });
     this.$watch("selected", (selected) => {
       this.questions.find(
