@@ -66,21 +66,17 @@
     <div class="mt-2 w-full flex justify-between">
       <button
         class="bg-white text-sm font-medium text-black px-5 py-2 rounded-lg shadow-md cursor-pointer focus:outline-none"
+        :class="question == 0 ? 'invisible' : ''"
         @click="previous()"
       >
         Backward
       </button>
       <button
         class="bg-abb-300 text-sm font-medium text-white px-5 py-2 rounded-lg shadow-md cursor-pointer focus:outline-none"
-        @click="next()"
+        @click="isDone ? done() : next()"
       >
-        Forward
+        {{ isDone ? "Done" : "Forward" }}
       </button>
-    </div>
-    <div v-for="q in availableQuestions" :key="q.id">
-      <span>ID: {{ q.id }}, </span>
-      <span>Question: {{ q.question }}</span>
-      <span v-if="'answer' in q">, Answer: {{ q.answer }}</span>
     </div>
   </div>
 </template>
@@ -122,19 +118,42 @@ export default {
     const questions = ref<Question[]>(questionsJson);
     const question = ref(0);
     const selected = ref(questionsJson[0].options[0]);
-    questions.value[question.value].answer = selected.value.id;
+    questions.value[0].answer = 0;
 
     return { questions, question, selected };
   },
   methods: {
     previous() {
-      this.question--;
+      if (this.question > 0) {
+        this.question--;
+      }
     },
     next() {
-      this.question++;
+      if (this.availableQuestions[this.question] !== undefined) {
+        this.question++;
+      }
     },
-    isDone() {},
-    done() {},
+    done() {
+      this.questions = questionsJson;
+      this.questions[0].answer = 0;
+      this.question = 0;
+      this.selected = questionsJson[0].options[0];
+      if (this.questions[5].answer === 0) {
+        this.$router.push("/tips");
+      } else {
+        this.$router.push("/thanks");
+      }
+    },
+    async postSurvey() {
+      console.log("Trying to post...");
+      for (const q in this.availableQuestions) {
+        if ("answer"! in this.availableQuestions[q].answer) {
+          console.log("Failed to post!");
+          return null;
+        }
+      }
+      // todo: add things
+    },
   },
   computed: {
     availableQuestions() {
@@ -154,7 +173,7 @@ export default {
           availableQuestions.push(this.questions[q]);
         } else {
           if (getOption(this.questions[q])) {
-            if (this.questions[q].answer) {
+            if ("answer" in this.questions[q]) {
               const availableQuestion = {
                 id: this.questions[q].id,
                 question: this.questions[q].question,
@@ -174,6 +193,13 @@ export default {
         }
       }
       return availableQuestions;
+    },
+    isDone() {
+      if (this.availableQuestions.length - 1 === this.question) {
+        return true;
+      } else {
+        return false;
+      }
     },
   },
 };
