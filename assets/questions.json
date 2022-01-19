@@ -1,0 +1,181 @@
+[
+  {
+    "question": "Hur blev din print?",
+    "options": [
+      {
+        "title": "Bra",
+        "description": "Printern går att använda",
+        "id": 0,
+        "success": true
+      },
+      {
+        "title": "Oanvändbar",
+        "description": "Den funkar inte!",
+        "id": 1,
+        "success": false
+      }
+    ]
+  },
+  {
+    "question": "Vilken printer använde du?",
+    "options": [
+      {
+        "title": "Finder 1",
+        "type": "finder",
+        "printerNum": 1,
+        "description": "",
+        "id": 0
+      },
+      {
+        "title": "Finder 2",
+        "type": "finder",
+        "printerNum": 2,
+        "description": "",
+        "id": 1
+      },
+      {
+        "title": "Finder 3",
+        "type": "finder",
+        "printerNum": 3,
+        "description": "",
+        "id": 2
+      },
+      {
+        "title": "Finder 4",
+        "type": "finder",
+        "printerNum": 4,
+        "description": "",
+        "id": 3
+      },
+      {
+        "title": "Finder 5",
+        "type": "finder",
+        "printerNum": 5,
+        "description": "",
+        "id": 4
+      },
+      {
+        "title": "Finder 6",
+        "type": "finder",
+        "printerNum": 6,
+        "description": "",
+        "id": 5
+      },
+      {
+        "title": "Adventurer 1",
+        "type": "finder",
+        "printerNum": 1,
+        "description": "",
+        "id": 6
+      },
+      {
+        "title": "Adventurer 2",
+        "type": "finder",
+        "printerNum": 2,
+        "description": "",
+        "id": 7
+      },
+      {
+        "title": "Adventurer 3",
+        "type": "finder",
+        "printerNum": 3,
+        "description": "",
+        "id": 8
+      },
+      {
+        "title": "Adventurer 4",
+        "type": "finder",
+        "printerNum": 4,
+        "description": "",
+        "id": 9
+      },
+      {
+        "title": "Adventurer 5",
+        "type": "finder",
+        "printerNum": 5,
+        "description": "",
+        "id": 10
+      }
+    ]
+  },
+  {
+    "question": "Varför gick det dåligt?",
+    "options": [
+      {
+        "title": "Filament sprucket",
+        "description": "",
+        "id": 0
+      },
+      {
+        "title": "Fastnade inte",
+        "description": "",
+        "id": 1
+      },
+      {
+        "title": "Warping",
+        "description": "",
+        "id": 2
+      },
+      {
+        "title": "Inga supports",
+        "description": "",
+        "id": 3
+      },
+      {
+        "title": "Stringing",
+        "description": "",
+        "id": 4
+      },
+      {
+        "title": "För tunna lager",
+        "description": "",
+        "id": 5
+      },
+      {
+        "title": "Fel toleranser",
+        "description": "",
+        "id": 6
+      },
+      {
+        "title": "Printade inte klart",
+        "description": "",
+        "id": 7
+      },
+      {
+        "title": "Ojämn printyta",
+        "description": "",
+        "id": 8
+      },
+      {
+        "title": "Dålig fil",
+        "description": "",
+        "id": 9
+      },
+      {
+        "title": "Bräcklig print",
+        "description": "",
+        "id": 10
+      },
+      {
+        "title": "Gick sönder i lossning från plattan",
+        "description": "",
+        "id": 11
+      }
+    ]
+  },
+  {
+    "question": "Vill du bli bättre på att printa",
+    "options": [
+      {
+        "title": "Ja",
+        "description": "Jag vill ha tips för att förbättra mina prints i framtiden",
+        "id": 0
+      },
+      {
+        "title": "Nej",
+        "description": "Jag vill inte ha några tips",
+        "id": 1
+      }
+    ]
+  }
+]
