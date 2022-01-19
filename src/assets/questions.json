@@ -1,0 +1,229 @@
+[
+  {
+    "id": 0,
+    "question": "Hur blev din print?",
+    "options": [
+      {
+        "id": 0,
+        "title": "Bra",
+        "description": "description",
+        "value": true
+      },
+      {
+        "id": 1,
+        "title": "Oanvändbar",
+        "description": "description",
+        "value": false
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "question": "Spets/prod?",
+    "options": [
+      {
+        "id": 0,
+        "title": "Spets",
+        "description": "description",
+        "value": "spets"
+      },
+      {
+        "id": 1,
+        "title": "Prod",
+        "description": "description",
+        "value": "prod"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Vilken printer typ?",
+    "dependencies": [
+      {
+        "id": 0,
+        "depends": 1,
+        "value": 0,
+        "options": [
+          {
+            "id": 0,
+            "title": "Finder",
+            "description": "description",
+            "value": "finder"
+          },
+          {
+            "id": 1,
+            "title": "Adventurer",
+            "description": "description",
+            "value": "adventurer"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Vilket printer nr?",
+    "dependencies": [
+      {
+        "id": 0,
+        "depends": 1,
+        "value": 1,
+        "options": [
+          {
+            "id": 0,
+            "title": "1",
+            "description": "description",
+            "value": 1
+          },
+          {
+            "id": 1,
+            "title": "2",
+            "description": "description",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "depends": 2,
+        "value": 0,
+        "options": [
+          {
+            "id": 0,
+            "title": "3",
+            "description": "description",
+            "value": 3
+          },
+          {
+            "id": 1,
+            "title": "4",
+            "description": "description",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "depends": 2,
+        "value": 1,
+        "options": [
+          {
+            "id": 0,
+            "title": "5",
+            "description": "description",
+            "value": 5
+          },
+          {
+            "id": 1,
+            "title": "6",
+            "description": "description",
+            "value": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Varför gick det dålig?",
+    "dependencies": [
+      {
+        "id": 0,
+        "depends": 0,
+        "value": 1,
+        "options": [
+          {
+            "id": 0,
+            "title": "Filament sprucket",
+            "description": "",
+            "value": "filament"
+          },
+          {
+            "id": 1,
+            "title": "Fastnade inte",
+            "description": "",
+            "value": "filament"
+          },
+          {
+            "id": 2,
+            "title": "Warping",
+            "description": "",
+            "value": "filament"
+          },
+          {
+            "id": 3,
+            "title": "Inga supports",
+            "description": "",
+            "value": "filament"
+          },
+          {
+            "id": 4,
+            "title": "Stringing",
+            "description": "",
+            "value": "filament"
+          },
+          {
+            "id": 5,
+            "title": "För tunna lager",
+            "description": "",
+            "value": "filament"
+          },
+          {
+            "id": 6,
+            "title": "Fel toleranser",
+            "description": "",
+            "value": "filament"
+          },
+          {
+            "id": 7,
+            "title": "Printade inte klart",
+            "description": "",
+            "value": "filament"
+          },
+          {
+            "id": 8,
+            "title": "Ojämn printyta",
+            "description": "",
+            "value": "filament"
+          },
+          {
+            "id": 9,
+            "title": "Dålig fil",
+            "description": "",
+            "value": "filament"
+          },
+          {
+            "id": 10,
+            "title": "Bräcklig print",
+            "description": "",
+            "value": "filament"
+          },
+          {
+            "id": 11,
+            "title": "Gick sönder i lossning från plattan",
+            "description": "",
+            "value": "filament"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Vill du bli bättre på att printa?",
+    "options": [
+      {
+        "id": 0,
+        "title": "ja",
+        "description": "description",
+        "value": true
+      },
+      {
+        "id": 1,
+        "title": "nej",
+        "description": "description",
+        "value": false
+      }
+    ]
+  }
+]
