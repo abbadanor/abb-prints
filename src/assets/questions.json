@@ -211,18 +211,25 @@
   {
     "id": 4,
     "question": "Vill du bli bättre på att printa?",
-    "options": [
+    "dependencies": [
       {
         "id": 0,
-        "title": "ja",
-        "description": "description",
-        "value": true
-      },
-      {
-        "id": 1,
-        "title": "nej",
-        "description": "description",
-        "value": false
+        "depends": 0,
+        "value": 1,
+        "options": [
+          {
+            "id": 0,
+            "title": "ja",
+            "description": "description",
+            "value": true
+          },
+          {
+            "id": 1,
+            "title": "nej",
+            "description": "description",
+            "value": false
+          }
+        ]
       }
     ]
   }

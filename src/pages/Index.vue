@@ -176,14 +176,21 @@ function next() {
 }
 
 function done() {
-  questions.value = questionsJson;
-  questions.value[0].answer = 0;
-  question.value = 0;
-  selected.value = questionsJson[0].options![0];
   if (questions.value[5].answer === 0) {
-    router.push("suggestion");
+    router.push({
+      path: "suggestions",
+      query: { id: questions.value[4].answer },
+    });
   } else {
     router.push("thanks");
   }
+  for (const q in questions.value) {
+    if ("answer" in questions.value[q]) {
+      delete questions.value[q].answer;
+    }
+  }
+  questions.value[0].answer = 0;
+  question.value = 0;
+  selected.value = questionsJson[0].options![0];
 }
 </script>

@@ -1,7 +1,4 @@
 <template>
-  <teleport to="head">
-    <title>ABB Prints</title>
-  </teleport>
   <div class="min-h-screen relative overflow-hidden pb-24">
     <transition name="fade">
       <Sidebar v-if="store.sidebar"></Sidebar>
@@ -20,6 +17,7 @@ import Footer from "./components/Footer.vue";
 import Sidebar from "./components/Sidebar.vue";
 import { useStore } from "./store";
 
+document.title = "ABB Prints";
 const store = useStore();
 </script>
 
