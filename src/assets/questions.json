@@ -48,13 +48,13 @@
             "id": 0,
             "title": "Finder",
             "description": "description",
-            "value": "finder"
+            "value": "Finder"
           },
           {
             "id": 1,
             "title": "Adventurer",
             "description": "description",
-            "value": "adventurer"
+            "value": "Adventurer"
           }
         ]
       }
@@ -124,7 +124,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "question": "Varför gick det dålig?",
     "dependencies": [
       {
@@ -136,73 +136,73 @@
             "id": 0,
             "title": "Filament sprucket",
             "description": "",
-            "value": "filament"
+            "value": "Filament sprucket"
           },
           {
             "id": 1,
             "title": "Fastnade inte",
             "description": "",
-            "value": "filament"
+            "value": "Fastnade inte"
           },
           {
             "id": 2,
             "title": "Warping",
             "description": "",
-            "value": "filament"
+            "value": "Warping"
           },
           {
             "id": 3,
             "title": "Inga supports",
             "description": "",
-            "value": "filament"
+            "value": "Inga supports"
           },
           {
             "id": 4,
             "title": "Stringing",
             "description": "",
-            "value": "filament"
+            "value": "Stringing"
           },
           {
             "id": 5,
             "title": "För tunna lager",
             "description": "",
-            "value": "filament"
+            "value": "För tunna lager"
           },
           {
             "id": 6,
             "title": "Fel toleranser",
             "description": "",
-            "value": "filament"
+            "value": "Fel toleranser"
           },
           {
             "id": 7,
             "title": "Printade inte klart",
             "description": "",
-            "value": "filament"
+            "value": "Printade inte klart"
           },
           {
             "id": 8,
             "title": "Ojämn printyta",
             "description": "",
-            "value": "filament"
+            "value": "Ojämn printyta"
           },
           {
             "id": 9,
             "title": "Dålig fil",
             "description": "",
-            "value": "filament"
+            "value": "Dålig fil"
           },
           {
             "id": 10,
             "title": "Bräcklig print",
             "description": "",
-            "value": "filament"
+            "value": "Bräcklig print"
           },
           {
             "id": 11,
             "title": "Gick sönder i lossning från plattan",
             "description": "",
-            "value": "filament"
+            "value": "Gick sönder i lossning från plattan"
           }
         ]
       }

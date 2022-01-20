@@ -92,6 +92,7 @@ import {
 } from "@headlessui/vue";
 import questionsJson from "../assets/questions.json";
 import { Question } from "../interfaces/Question";
+import axios, { AxiosError } from "axios";
 
 const router = useRouter();
 const questions = ref<Question[]>(questionsJson);
@@ -176,6 +177,7 @@ function next() {
 }
 
 function done() {
+  postSurvey();
   if (questions.value[5].answer === 0) {
     router.push({
       path: "suggestions",
@@ -192,5 +194,46 @@ function done() {
   questions.value[0].answer = 0;
   question.value = 0;
   selected.value = questionsJson[0].options![0];
+}
+
+async function postSurvey() {
+  interface PostBody {
+    printer: String;
+    printerNr: number;
+    success: boolean;
+    reason?: String;
+  }
+  let printerAnswer;
+  if (questions.value[1].answer === 1) {
+    printerAnswer = "prod-Adventurer";
+  } else {
+    printerAnswer =
+      "spets-" +
+      availableQuestions.value.find((q) => q.id === 2)!.options![
+        questions.value[2].answer!
+      ].value;
+  }
+  let body: PostBody = {
+    success: availableQuestions.value.find((q) => q.id === 0)!.options![
+      questions.value[0].answer!
+    ].value,
+    printer: printerAnswer,
+    printerNr: availableQuestions.value.find((q) => q.id === 3)!.options![
+      questions.value[3].answer!
+    ].value,
+  };
+  if ("answer" in questions.value[4]) {
+    body.reason = availableQuestions.value.find((q) => q.id === 3)!.options![
+      questions.value[3].answer!
+    ].value;
+  }
+  console.log("Posting...");
+  try {
+    await axios.post("https://printer-success-api.herokuapp.com/", body);
+    console.log("Post success!");
+  } catch (error: any) {
+    console.log("Post error!");
+    console.error(error.response.data.error);
+  }
 }
 </script>
