@@ -1,9 +1,11 @@
 <template>
-  <div class="">
+  <div class>
     <RadioGroup v-model="selected">
-      <RadioGroupLabel as="h1" class="font-semibold text-lg mb-1">{{
-        availableQuestions[question].question
-      }}</RadioGroupLabel>
+      <RadioGroupLabel as="h1" class="font-semibold text-lg mb-1">
+        {{
+          availableQuestions[question].question
+        }}
+      </RadioGroupLabel>
       <div class="space-y-2">
         <RadioGroupOption
           as="template"
@@ -28,27 +30,19 @@
                     as="p"
                     :class="checked ? 'text-white' : 'text-gray-900'"
                     class="font-medium"
-                  >
-                    {{ q.title }}
-                  </RadioGroupLabel>
+                  >{{ q.title }}</RadioGroupLabel>
                   <RadioGroupDescription
                     as="span"
                     :class="checked ? 'text-sky-100' : 'text-gray-500'"
                     class="inline"
                   >
-                    <span> {{ q.description }}</span>
+                    <span>{{ q.description }}</span>
                   </RadioGroupDescription>
                 </div>
               </div>
               <div v-show="checked" class="flex-shrink-0 text-white">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="12"
-                    fill="#fff"
-                    fill-opacity="0.2"
-                  />
+                  <circle cx="12" cy="12" r="12" fill="#fff" fill-opacity="0.2" />
                   <path
                     d="M7 13l3 3 7-7"
                     stroke="#fff"
@@ -68,15 +62,11 @@
         class="bg-white text-sm font-medium text-black px-5 py-2 rounded-lg shadow-md cursor-pointer focus:outline-none"
         :class="question == 0 ? 'invisible' : ''"
         @click="previous()"
-      >
-        Backward
-      </button>
+      >Backward</button>
       <button
         class="bg-abb-300 text-sm font-medium text-white px-5 py-2 rounded-lg shadow-md cursor-pointer focus:outline-none"
         @click="isDone ? done() : next()"
-      >
-        {{ isDone ? "Done" : "Forward" }}
-      </button>
+      >{{ isDone ? "Done" : "Forward" }}</button>
     </div>
   </div>
 </template>
@@ -92,7 +82,7 @@ import {
 } from "@headlessui/vue";
 import questionsJson from "../assets/questions.json";
 import { Question } from "../interfaces/Question";
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 
 const router = useRouter();
 const questions = ref<Question[]>(questionsJson);
@@ -229,7 +219,7 @@ async function postSurvey() {
   }
   console.log("Posting...");
   try {
-    await axios.post("https://printer-success-api.herokuapp.com/", body);
+    //await axios.post("https://printer-success-api.herokuapp.com/", body);
     console.log("Post success!");
   } catch (error: any) {
     console.log("Post error!");

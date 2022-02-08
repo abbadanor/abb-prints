@@ -1,8 +1,6 @@
 <template>
   <div class="min-h-screen relative overflow-hidden pb-24">
-    <transition name="fade">
-      <Sidebar v-if="store.sidebar"></Sidebar>
-    </transition>
+    <Sidebar></Sidebar>
     <Header></Header>
     <div class="max-w-xl w-full mx-auto px-4">
       <router-view></router-view>
@@ -27,15 +25,5 @@ body {
 }
 .global-text {
   @apply text-gray-900;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.25s;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateX(100%);
 }
 </style>
