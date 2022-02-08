@@ -15,10 +15,3 @@
     <p class="text-gray-500">Build with Vite + Tailwind CSS</p>
   </div>
 </template>
-
-<script lang="ts" setup>
-const epa = 3
-if (epa === 3) {
-  console.log("ja den äre tre.")
-}
-</script>
