@@ -4,7 +4,7 @@
       <Sidebar v-if="store.sidebar"></Sidebar>
     </transition>
     <Header></Header>
-    <div class="container mx-auto flex p-4 justify-center">
+    <div class="max-w-xl w-full mx-auto px-4">
       <router-view></router-view>
     </div>
     <Footer></Footer>

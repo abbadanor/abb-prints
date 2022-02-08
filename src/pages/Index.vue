@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-md mx-auto">
+  <div class="">
     <RadioGroup v-model="selected">
       <RadioGroupLabel as="h1" class="font-semibold text-lg mb-1">{{
         availableQuestions[question].question
@@ -178,7 +178,7 @@ function next() {
 
 function done() {
   postSurvey();
-  if (questions.value[5].answer === 0) {
+  if (questions.value[4].answer === 0) {
     router.push({
       path: "suggestions",
       query: { id: questions.value[4].answer },

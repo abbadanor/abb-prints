@@ -6,38 +6,38 @@
       {
         "id": 0,
         "title": "Bra",
-        "description": "description",
+        "description": "Printen fungerar som förväntat",
         "value": true
       },
       {
         "id": 1,
         "title": "Oanvändbar",
-        "description": "description",
+        "description": "Printen fungerar ej som förväntat",
         "value": false
       }
     ]
   },
   {
     "id": 1,
-    "question": "Spets/prod?",
+    "question": "Går du på spets eller prod?",
     "options": [
       {
         "id": 0,
         "title": "Spets",
-        "description": "description",
+        "description": "",
         "value": "spets"
       },
       {
         "id": 1,
         "title": "Prod",
-        "description": "description",
+        "description": "",
         "value": "prod"
       }
     ]
   },
   {
     "id": 2,
-    "question": "Vilken printer typ?",
+    "question": "Av vilken modell är din printer?",
     "dependencies": [
       {
         "id": 0,
@@ -47,13 +47,13 @@
           {
             "id": 0,
             "title": "Finder",
-            "description": "description",
+            "description": "Äldre modell, röd och svart i färg",
             "value": "Finder"
           },
           {
             "id": 1,
             "title": "Adventurer",
-            "description": "description",
+            "description": "Nyare modell, vit och svart i färg",
             "value": "Adventurer"
           }
         ]
@@ -62,7 +62,7 @@
   },
   {
     "id": 3,
-    "question": "Vilket printer nr?",
+    "question": "Vilket nummer hade din printer?",
     "dependencies": [
       {
         "id": 0,
@@ -72,14 +72,62 @@
           {
             "id": 0,
             "title": "1",
-            "description": "description",
+            "description": "",
             "value": 1
           },
           {
             "id": 1,
             "title": "2",
-            "description": "description",
+            "description": "",
             "value": 2
+          },
+          {
+            "id": 2,
+            "title": "3",
+            "description": "",
+            "value": 3
+          },
+          {
+            "id": 3,
+            "title": "4",
+            "description": "",
+            "value": 4
+          },
+          {
+            "id": 4,
+            "title": "5",
+            "description": "",
+            "value": 5
+          },
+          {
+            "id": 5,
+            "title": "6",
+            "description": "",
+            "value": 6
+          },
+          {
+            "id": 6,
+            "title": "7",
+            "description": "",
+            "value": 7
+          },
+          {
+            "id": 7,
+            "title": "8",
+            "description": "",
+            "value": 8
+          },
+          {
+            "id": 8,
+            "title": "9",
+            "description": "",
+            "value": 9
+          },
+          {
+            "id": 9,
+            "title": "10",
+            "description": "",
+            "value": 10
           }
         ]
       },
@@ -90,15 +138,39 @@
         "options": [
           {
             "id": 0,
-            "title": "3",
-            "description": "description",
-            "value": 3
+            "title": "1",
+            "description": "",
+            "value": 1
           },
           {
             "id": 1,
+            "title": "2",
+            "description": "",
+            "value": 2
+          },
+          {
+            "id": 2,
+            "title": "3",
+            "description": "",
+            "value": 3
+          },
+          {
+            "id": 3,
             "title": "4",
-            "description": "description",
+            "description": "",
             "value": 4
+          },
+          {
+            "id": 4,
+            "title": "5",
+            "description": "",
+            "value": 5
+          },
+          {
+            "id": 5,
+            "title": "6",
+            "description": "",
+            "value": 6
           }
         ]
       },
@@ -109,15 +181,27 @@
         "options": [
           {
             "id": 0,
-            "title": "5",
-            "description": "description",
-            "value": 5
+            "title": "1",
+            "description": "",
+            "value": 1
           },
           {
             "id": 1,
-            "title": "6",
-            "description": "description",
-            "value": 6
+            "title": "2",
+            "description": "",
+            "value": 2
+          },
+          {
+            "id": 2,
+            "title": "3",
+            "description": "",
+            "value": 3
+          },
+          {
+            "id": 3,
+            "title": "4",
+            "description": "",
+            "value": 4
           }
         ]
       }
@@ -125,7 +209,7 @@
   },
   {
     "id": 4,
-    "question": "Varför gick det dålig?",
+    "question": "Varför gick det dåligt?",
     "dependencies": [
       {
         "id": 0,
@@ -203,6 +287,12 @@
             "title": "Gick sönder i lossning från plattan",
             "description": "",
             "value": "Gick sönder i lossning från plattan"
+          },
+          {
+            "id": 12,
+            "title": "Vet inte",
+            "description": "",
+            "value": "Vet inte"
           }
         ]
       }
@@ -219,14 +309,14 @@
         "options": [
           {
             "id": 0,
-            "title": "ja",
-            "description": "description",
+            "title": "Ja",
+            "description": "Jag vill ha förslag för att förbättra mina framtida prints",
             "value": true
           },
           {
             "id": 1,
-            "title": "nej",
-            "description": "description",
+            "title": "Nej",
+            "description": "Jag vill inte förbättra mina prints",
             "value": false
           }
         ]
